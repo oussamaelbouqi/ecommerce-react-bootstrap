@@ -1,0 +1,193 @@
+:root {
+    --main-color: #0090f0;
+    --p-color: #7b7b7b;
+    --bg-color: #F3F3F3;
+    --white-color: #fff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6d5;
+}
+.Slide-Product{
+    padding: 50px 0;
+}
+
+.top-slide {
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    padding: 15px 20px 20px 0px;
+}
+
+.top-slide::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.top-slide h2 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    text-transform:capitalize ;
+
+}
+
+
+/* products */
+.product {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 25px 15px;
+    border: solid 1px var(--border-color);
+    transition:   0.3s ;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    color: var(--color-heading);
+    text-decoration: none;
+
+}
+
+.product:hover {
+    border-color: var(--main-color);
+    box-shadow: 10px 10px 15px #d1d1d13d;
+
+}
+
+.product a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product .img-product {
+    position: relative;
+    height: 180px;
+    padding: 0 20px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.product .img-product img {
+    width:auto;
+    height: 160px;
+    
+}
+.product .name-product {
+    color: var(--color-heading);
+    margin-bottom: 10px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical;
+
+}
+
+.product .stars {
+     margin: 15px 0;
+     display: flex;
+     gap: 5px
+}
+.product .stars svg{
+    fill: #f8d941;
+    font-size: 18px;
+}
+
+.product .price span {
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+ .product .icons {
+    position: absolute;
+    top: 39%;
+    right: -60px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.3s;
+ }
+  .product .icons  span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ;
+  }
+   .product .icons  span.in-Fav{
+    background-color: var(--main-color);
+    
+  }
+   .product .icons  span.in-Fav svg{
+    fill: var(--white-color);
+  }
+    .product:hover .icons{
+        right: 27px;
+       
+    }
+
+.product.inCart .icons .btn-addtocart{
+   background-color: var(--main-color);
+   /* من اجع عدم اظافة المنتوج مرة اخرى  */
+   pointer-events: none;
+}
+
+.product.inCart .icons .btn-addtocart svg{
+   fill: var(--white-color);
+}
+    /* /* slideProductsLoading */ 
+
+    .Loading-slideProduct .top-slide{
+         height: 112px;
+         
+    }
+    .Loading-slideProduct .top-slide h2{
+        height: 35px;
+        width: 250px;
+    }
+    .Loading-slideProduct .top-slide p{
+        height: 25px;
+        width: 350px;
+    }
+  .products-loading{
+      display: flex;
+      gap: 10px
+  }
+   .products-loading .img-product{
+
+  }
+  .products-loading .content{
+     height: 30px;
+     margin-bottom: 10px;
+  }
+.product .status-cart {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #253237;
+}
+.product.inCart .status-cart{
+    top: 10px;
+}
+ .product .status-cart svg {
+     color: springgreen;
+  }
