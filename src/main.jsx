@@ -11,7 +11,7 @@ import AuthProvider from './context/AuthContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/ecommerce-react-bootstrap'>
       <AuthProvider>
         <CartProvider>
           <App />
